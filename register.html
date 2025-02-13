@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Реєстрація / Вхід - Тату Арт</title>
-    <link rel="stylesheet" href="register.css">
+    <title>Реєстрація - Тату Арт</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="register-page">
 
 <header>
     <div class="logo">
@@ -15,54 +15,25 @@
     </div>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="home.html">~home~</a></li>
-        <li><a href="artists.html">~artists~</a></li>
-        <li><a href="gallery.html">~gallery~</a></li>
-        <li><a href="designs.html">~designs~</a></li>
-        <li><a href="shop.html">~merch & apparel~</a></li>
-        <li><a href="faq.html">~FAQ~</a></li>
-        <li><a href="pricing.html">~pricing~</a></li>
-        <li><a href="reviews.html">~reviews~</a></li>
-        <li><a href="contact.html">~contact~</a></li>
-        <li><a href="register.html" class="active">~register~</a></li>
-    </ul>
-</nav>
-
 <main>
-    <section class="auth-section">
-        <h2>Ласкаво просимо!</h2>
-        <p>Зареєструйтеся або увійдіть у свій акаунт, щоб отримати доступ до всіх можливостей.</p>
+    <section class="register-container">
+        <h2>Приєднуйся до нас!</h2>
+        <p>Заповни форму та стань частиною спільноти татуювальників.</p>
 
-        <div class="auth-container">
-            <!-- Форма реєстрації -->
-            <form action="register_process.php" method="POST" class="auth-form">
-                <h3>Реєстрація</h3>
-                <label for="username">Ім'я користувача</label>
-                <input type="text" id="username" name="username" required placeholder="Введіть ім'я">
+        <form action="register_process.php" method="POST" class="register-form">
+            <label for="username">Ім'я користувача</label>
+            <input type="text" id="username" name="username" required placeholder="Введіть ваше ім'я">
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="example@email.com">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
 
-                <label for="password">Пароль</label>
-                <input type="password" id="password" name="password" required placeholder="****">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" required placeholder="****">
 
-                <button type="submit">Зареєструватися</button>
-            </form>
+            <button type="submit">Зареєструватися</button>
+        </form>
 
-            <!-- Форма входу -->
-            <form action="login_process.php" method="POST" class="auth-form">
-                <h3>Вхід</h3>
-                <label for="login-email">Email</label>
-                <input type="email" id="login-email" name="login-email" required placeholder="example@email.com">
-
-                <label for="login-password">Пароль</label>
-                <input type="password" id="login-password" name="login-password" required placeholder="****">
-
-                <button type="submit">Увійти</button>
-            </form>
-        </div>
+        <p class="login-link">Вже маєш акаунт? <a href="login.html">Увійти</a></p>
     </section>
 </main>
 
