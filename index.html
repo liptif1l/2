@@ -31,10 +31,34 @@
 </nav>
 
 <main>
-    <section class="intro">
-        <h2>Знайдіть своє ідеальне тату!</h2>
-        <p>Татуювання — це не просто малюнок на шкірі. Це вираження особистості та стиль, який супроводжує вас усе життя. Ознайомтесь із різними стилями та техніками татуювань, що існують у світі.</p>
+    <section class="content-container">
+        <!-- Основний контент -->
+        <section class="intro">
+            <h2>Знайдіть своє ідеальне тату!</h2>
+            <p>Татуювання — це не просто малюнок на шкірі. Це вираження особистості та стиль, який супроводжує вас усе життя. Ознайомтесь із різними стилями та техніками татуювань, що існують у світі.</p>
+        </section>
+
+        <!-- Вікно акаунта -->
+        <aside class="account-window">
+            <div class="account-box">
+                <h3>Мій акаунт</h3>
+                <div class="account-content">
+                    <div class="avatar">
+                        <img src="default-avatar.png" alt="User Avatar" id="user-avatar">
+                    </div>
+                    <div class="user-info">
+                        <p id="user-nickname">Гість</p>
+                        <p id="user-email">Будь ласка, увійдіть</p>
+                    </div>
+                    <div class="account-actions">
+                        <button onclick="window.location.href='register.html'">Реєстрація</button>
+                        <button onclick="window.location.href='login.html'">Вхід</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
     </section>
+</main>
     <section class="image-gallery">
         <h3>Галерея татуювань</h3>
         <div class="gallery">
