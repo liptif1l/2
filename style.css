@@ -143,7 +143,7 @@ main {
     gap: 10px;
 }
 
-.account-actions input[type=submit] {
+.account-actions button {
     background: #e74c3c;
     color: white;
     border: none;
