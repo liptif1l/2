@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тату Арт - FAQ</title>
     <link rel="stylesheet" href="faq.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -31,13 +33,16 @@
     <main class="main-container">
         <section class="faq-section">
             <h2>Питання та відповіді</h2>
+            <!-- Форма для відправки питань -->
             <form id="question-form">
                 <label for="question-input">Задайте своє питання:</label>
-                <textarea id="question-input" required></textarea>
+                <textarea id="question-input" placeholder="Напишіть своє питання тут..." required></textarea>
                 <button type="submit">Відправити</button>
             </form>
+
             <div id="questions-container">
-                <!-- Тут будуть відображатися питання та відповіді -->
+                <h3>Всі питання:</h3>
+                <!-- Тут будуть з'являтися всі питання -->
             </div>
         </section>
 
@@ -64,4 +69,5 @@
 
     <script src="faq.js"></script>
 </body>
+
 </html>
