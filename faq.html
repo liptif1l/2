@@ -3,70 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Тату Арт</title>
+    <title>Тату Арт - FAQ</title>
     <link rel="stylesheet" href="faq.css">
 </head>
 <body>
-
-<header>
-    <div class="logo">
-        <h1>Тату Арт</h1>
-        <p>Ink that tells your story</p>
-    </div>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="home.html">~home~</a></li>
-        <li><a href="artists.html">~artists~</a></li>
-        <li><a href="gallery.html">~gallery~</a></li>
-        <li><a href="designs.html">~designs~</a></li>
-        <li><a href="shop.html">~merch & apparel~</a></li>
-        <li><a href="faq.html">~FAQ~</a></li>
-        <li><a href="pricing.html">~pricing~</a></li>
-        <li><a href="reviews.html">~reviews~</a></li>
-        <li><a href="contact.html">~contact~</a></li>
-    </ul>
-</nav>
-
-<main class="faq-main-container">
-    <!-- Блок FAQ -->
-    <section class="faq-container">
-        <h2>Часті запитання</h2>
-
-        <!-- Форма для додавання питання -->
-        <div id="ask-form">
-            <h3>Задати питання</h3>
-            <textarea id="question-input" placeholder="Напишіть ваше питання..."></textarea>
-            <button onclick="addQuestion()">📩 Надіслати</button>
+    <header>
+        <div class="logo">
+            <h1>Тату Арт</h1>
+            <p>Ink that tells your story</p>
         </div>
+    </header>
 
-        <!-- Список питань -->
-        <div id="faq-list"></div>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="home.html">~home~</a></li>
+            <li><a href="artists.html">~artists~</a></li>
+            <li><a href="gallery.html">~gallery~</a></li>
+            <li><a href="designs.html">~designs~</a></li>
+            <li><a href="shop.html">~merch & apparel~</a></li>
+            <li><a href="faq.html">~FAQ~</a></li>
+            <li><a href="pricing.html">~pricing~</a></li>
+            <li><a href="reviews.html">~reviews~</a></li>
+            <li><a href="contact.html">~contact~</a></li>
+        </ul>
+    </nav>
 
-    <!-- Вікно акаунта (справа) -->
-    <aside class="account-window">
-        <div class="account-box">
-            <div class="avatar">
-                <img src="default-avatar.png" alt="Аватар" id="user-avatar">
+    <main class="main-container">
+        <section class="faq-section">
+            <h2>Питання та відповіді</h2>
+            <form id="question-form">
+                <label for="question-input">Задайте своє питання:</label>
+                <textarea id="question-input" required></textarea>
+                <button type="submit">Відправити</button>
+            </form>
+            <div id="questions-container">
+                <!-- Тут будуть відображатися питання та відповіді -->
             </div>
-            <div class="user-info">
-                <h3 id="user-nickname">Гість</h3>
-                <p id="user-email">Ви не увійшли</p>
-            </div>
-            <div class="account-actions">
-                <button onclick="login()">🔑 Вхід</button>
-                <button onclick="register()">📝 Реєстрація</button>
-            </div>
-        </div>
-    </aside>
-</main>
+        </section>
 
-<footer>
-    <p>&copy; 2025 Тату Арт. Всі права захищені.</p>
-</footer>
+        <aside class="account-window">
+            <div class="account-box">
+                <div class="avatar">
+                    <img src="default-avatar.png" alt="Аватар" id="user-avatar">
+                </div>
+                <div class="user-info">
+                    <h3 id="user-nickname">Гість</h3>
+                    <p id="user-email">Ви не увійшли</p>
+                </div>
+                <div class="account-actions">
+                    <button onclick="document.location='login.html'">🔑 Вхід</button>
+                    <button onclick="document.location='register.html'">📝 Реєстрація</button>
+                </div>
+            </div>
+        </aside>
+    </main>
 
-<script src="faq.js"></script>
+    <footer>
+        <p>&copy; 2025 Тату Арт. Всі права захищені.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
