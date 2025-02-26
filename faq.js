@@ -1,43 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-    loadQuestions();
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const questionForm = document.getElementById('question-form');
+    const questionInput = document.getElementById('question-input');
+    const questionsContainer = document.getElementById('questions-container');
 
-function addQuestion() {
-    let questionInput = document.getElementById("question-input").value.trim();
-    let username = document.getElementById("user-nickname").innerText || "Гість"; // Якщо не авторизований, буде "Гість"
-
-    if (questionInput === "") {
-        alert("Будь ласка, напишіть питання!");
-        return;
-    }
-
-    let question = {
-        user: username,
-        text: questionInput,
-        date: new Date().toLocaleString()
-    };
-
-    let questions = JSON.parse(localStorage.getItem("faq")) || [];
-    questions.push(question);
-    localStorage.setItem("faq", JSON.stringify(questions));
-
-    document.getElementById("question-input").value = "";
-    loadQuestions();
-}
-
-function loadQuestions() {
-    let faqList = document.getElementById("faq-list");
-    faqList.innerHTML = "";
-    
-    let questions = JSON.parse(localStorage.getItem("faq")) || [];
-
-    questions.forEach(q => {
-        let questionItem = document.createElement("div");
-        questionItem.classList.add("faq-item");
-        questionItem.innerHTML = 
-            <p><strong>${q.user}</strong> <span class="faq-date">(${q.date})</span></p>
-            <p>${q.text}</p>
-        ;
-        faqList.prepend(questionItem);
+    questionForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const questionText = questionInput.value.trim();
+        if (questionText) {
+            addQuestion(questionText);
+            questionInput.value = '';
+        }
     });
-}
+
+    function addQuestion(text) {
+        const questionItem = document.createElement('div');
+        questionItem.className = 'question-item';
+        questionItem.innerHTML = `
+            <h3>Питання:</h3>
+            <p>${text}</p>
+            <div class="answers-container"></div>
+            <form class="answer-form">
+                <label>Ваша відповідь:</label>
+                <textarea required></textarea>
+                <button type="submit">Відпов12
