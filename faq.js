@@ -1,25 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const questionForm = document.getElementById('question-form');
+document.getElementById('question-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Отримуємо введене питання
     const questionInput = document.getElementById('question-input');
-    const questionsContainer = document.getElementById('questions-container');
+    const questionText = questionInput.value.trim();
 
-    questionForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const questionText = questionInput.value.trim();
-        if (questionText) {
-            addQuestion(questionText);
-            questionInput.value = '';
-        }
-    });
-
-    function addQuestion(text) {
-        const questionItem = document.createElement('div');
-        questionItem.className = 'question-item';
-        questionItem.innerHTML = `
-            <h3>Питання:</h3>
-            <p>${text}</p>
-            <div class="answers-container"></div>
-            <form class="answer-form">
-                <label>Ваша відповідь:</label>
-                <textarea required></textarea>
-                <button type="submit">Відпов12
+    if (questionText) {
+        // Створюємо новий блок для питання
+        const questionElement = document.createElement('div');
+        questionElement.classList
